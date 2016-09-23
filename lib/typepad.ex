@@ -11,7 +11,7 @@ defmodule Typepad do
       # Start the Ecto repository
       supervisor(Typepad.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(Typepad.Router, [], function: :start),
+      supervisor(Typepad.Endpoint, []),
       # Start your own worker by calling: Typepad.Worker.start_link(arg1, arg2, arg3)
       # worker(Typepad.Worker, [arg1, arg2, arg3]),
     ]
